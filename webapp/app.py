@@ -25,10 +25,11 @@ def display_swimmers():
     populate_data() 
     return render_template("select.html", title="Select a swimmer", url="/showfiles", select_id="swimmer", data=sorted(session["swimmers"]))
 
-@app.get("/files/<swimmer>")
-def get_swimmers_files(swimmer):
+@app.post("/showfiles")
+def display_swimmer_files():
     populate_data()
-    return str(session["swimmers"][swimmer])
+    name = request.form["swimmer"]
+    return render_template("select.html", title="Select an event", url="/showbarchart", select_id="file", data=session["swimmers"][name])
 
 if __name__ == "__main__":
     app.run(debug=True)
