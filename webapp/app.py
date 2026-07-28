@@ -31,5 +31,11 @@ def display_swimmer_files():
     name = request.form["swimmer"]
     return render_template("select.html", title="Select an event", url="/showbarchart", select_id="file", data=session["swimmers"][name])
 
+@app.post("/showbarchart")
+def show_bar_chart():
+    file_id = request.form["file"]
+    location = swimclub.produce_bar_chart(file_id, "templates/")
+    return render_template(location.split("/")[-1])
+
 if __name__ == "__main__":
     app.run(debug=True)
