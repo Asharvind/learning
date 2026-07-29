@@ -1,6 +1,12 @@
-{% block body %}
-<p>
-    This is Coach's swimclub system.
-    Begin by selecting ta <a href="swimmers">swimmer</a> to work with.
-</p>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/static/webapp.css"
+    </head>
+    <body>
+        <h2>{{title}}</h2>
+            {% block body %}
+            {% endblock %}
+    </body>
+</html>

@@ -18,7 +18,7 @@ def populate_data():
 
 @app.get("/")
 def index():
-    return render_template("index.html", title="Welcome to the Swimclub system")
+    return render_template("index.html", title="Welcome to the Swimclub")
 
 @app.get("/swimmers")
 def display_swimmers():
