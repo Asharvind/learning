@@ -4,7 +4,7 @@ import json
 URL = "https://en.wikipedia.org/wiki/List_of_world_records_in_swimming"
 RECORDS = (0, 1, 3, 4)
 COURSES = ("LC Men", "LC Women", "SC Men", "SC Women")
-WHERE = ""
+WHERE = "/home/headfirstpythonproject/webapp/"
 JSONDATA = "records.json"
 
 html = gazpacho.get(URL)
